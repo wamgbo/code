@@ -29,23 +29,22 @@
 #include<iostream>
 using namespace std;
 int main() { 
-	int  i, sum=0, j, num[26]={10, 11, 12, 13, 14, 15, 16, 17, 34,
+	int  i, sum=0, b=9, num[26]={10, 11, 12, 13, 14, 15, 16, 17, 34,
 								18, 19, 20, 21, 22, 35, 23, 24, 25,
 								26, 27, 28, 29, 32, 30, 31, 33};
 	string a;
 	cin>>a;
-	sum+=num[a[0]-'A']/10;
-	
-	if(num[a[0]-'A']>=10 and num[a[0]-'A']<20)
-		sum+=num[a[0]-'A']%10*9;
-	
-	if(num[a[0]-'A']>=20 and num[a[0]-'A']<30)
-		sum+=num[a[0]-'A']%10*9;	
-	
-	if(num[a[0]-'A']>=30 and num[a[0]-'A']<=33)
-		sum+=num[a[0]-'A']%10*9;						 
+	sum+=num[a[0]-'A']/10+(num[a[0]-'A']%10)*9;						 
 		
-	for(i=1;i<=9;i++){
-		 
+	for(i=1;i<=8;i++){
+		a[i]=a[i]-'0';
+		sum+=a[i]*(b-i);
+	}
+	sum+=a[9]-'0';
+	if(sum%10==0){
+		cout<<"real";
+	}
+	if(sum%10!=0){
+		cout<<"fake";
 	}
 }
