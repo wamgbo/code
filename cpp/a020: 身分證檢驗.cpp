@@ -34,15 +34,17 @@ int main() {
 									26, 27, 28, 29, 32, 30, 31, 33};
 	string a;
 	cin>>a;
-	en_begin=num[a[0]-'A'];
-	if(num[a[0-'A']]>=30)
-		en_end=num[a[0-'A']]%30;
-	if(num[a[0-'A']]>=20)
-		en_end=num[a[0-'A']]%20;
-	else
-		en_end=num[a[0-'A']]%10;
+	en_begin=num[a[0]-'A']/10;
 	
+	if(num[a[0]-'A']>=10 and num[a[0]-'A']<20)
+		en_end=num[a[0]-'A']%10*9;
 	
+	if(num[a[0]-'A']>=20 and num[a[0]-'A']<30)
+		en_end=num[a[0]-'A']%10*9;	
+	
+	if(num[a[0]-'A']>=30 and num[a[0]-'A']<=33)
+		en_end=num[a[0]-'A']%10*9;						 
+		
 	
 	
 	
