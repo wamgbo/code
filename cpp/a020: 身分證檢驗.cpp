@@ -29,26 +29,23 @@
 #include<iostream>
 using namespace std;
 int main() { 
-	int i,en_begin,en_end, num[26]={10, 11, 12, 13, 14, 15, 16, 17, 34,
-									18, 19, 20, 21, 22, 35, 23, 24, 25,
-									26, 27, 28, 29, 32, 30, 31, 33};
+	int  i, sum=0, j, num[26]={10, 11, 12, 13, 14, 15, 16, 17, 34,
+								18, 19, 20, 21, 22, 35, 23, 24, 25,
+								26, 27, 28, 29, 32, 30, 31, 33};
 	string a;
 	cin>>a;
-	en_begin=num[a[0]-'A']/10;
+	sum+=num[a[0]-'A']/10;
 	
 	if(num[a[0]-'A']>=10 and num[a[0]-'A']<20)
-		en_end=num[a[0]-'A']%10*9;
+		sum+=num[a[0]-'A']%10*9;
 	
 	if(num[a[0]-'A']>=20 and num[a[0]-'A']<30)
-		en_end=num[a[0]-'A']%10*9;	
+		sum+=num[a[0]-'A']%10*9;	
 	
 	if(num[a[0]-'A']>=30 and num[a[0]-'A']<=33)
-		en_end=num[a[0]-'A']%10*9;						 
+		sum+=num[a[0]-'A']%10*9;						 
 		
-	
-	
-	
-	
-	
-	
+	for(i=1;i<=9;i++){
+		 
+	}
 }
