@@ -3,7 +3,7 @@
 using namespace std;
 int main() { 
 	int i;
-	string a="'_'",b="'_-";
+	string a="'_'",b="-_-";
 	for(i=0;i<=10;i++){
 		cout<<a;
 		Sleep(1000);
